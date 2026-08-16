@@ -1,6 +1,14 @@
 {
   "rewrites": [
     { "source": "/admin/:path*", "destination": "/index.html" },
-    { "source": "/((?!assets/).*)", "destination": "/index.html" }
+    { "source": "/about/:path*", "destination": "/index.html" },
+    { "source": "/academics/:path*", "destination": "/index.html" },
+    { "source": "/people/:path*", "destination": "/index.html" },
+    { "source": "/admissions/:path*", "destination": "/index.html" },
+    { "source": "/news/:path*", "destination": "/index.html" },
+    { "source": "/achievements/:path*", "destination": "/index.html" },
+    { "source": "/gallery/:path*", "destination": "/index.html" },
+    { "source": "/faq/:path*", "destination": "/index.html" },
+    { "source": "/contact/:path*", "destination": "/index.html" }
   ]
 }
