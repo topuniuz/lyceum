@@ -1,0 +1,32 @@
+/* Accessibility and contrast safeguards. Keep every text/button pairing readable on its background. */
+.home-final{background:#eaf3f9;color:var(--navy)}
+.home-final .eyebrow.light{color:#456276}
+.home-final h2{color:var(--navy)}
+.home-final .button-light{background:var(--navy);color:#fff;border-color:var(--navy)}
+.home-final .button-light:hover{background:#173c5b;border-color:#173c5b;color:#fff}
+.home-final .button-light svg{color:currentColor}
+
+/* Light surfaces must never inherit white copy. */
+.statement,.feature-band,.home-news,.interior-body{color:var(--ink)}
+.statement .eyebrow,.feature-band .eyebrow,.home-news .eyebrow,.interior-body .eyebrow{color:#52697b}
+
+/* Explicit contrast for institutional cards and links. */
+.program-card h3,.program-card p,.program-card span,.program-card svg{color:inherit}
+.program-card p{color:#526575}
+.program-card>span,.detail-grid article>span{color:#075d9c}
+.inline-link{color:#102a43}
+
+/* Footer stays dark; never allow inherited light-surface rules to wash it out. */
+.site-footer{background:#102a43;color:#fff}
+.site-footer .wordmark,.site-footer .wordmark b,.site-footer .wordmark small{color:#fff}
+.site-footer .wordmark small{opacity:.7}
+.site-footer a,.site-footer button{color:rgba(255,255,255,.82)}
+.site-footer a:hover,.site-footer button:hover{color:#fff}
+
+/* Forms: dark labels and text on white controls. */
+.contact-form label{color:#42586a}
+.contact-form input,.contact-form textarea{color:#172b3a;background:#fff}
+.contact-form input::placeholder,.contact-form textarea::placeholder{color:#82909c;opacity:1}
+
+/* Mobile menu is a white surface. */
+@media(max-width:900px){.main-nav.is-open{background:#fff}.main-nav.is-open button{color:#42586a}.main-nav.is-open button.active{color:#0b78c8}}
