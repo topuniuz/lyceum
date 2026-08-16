@@ -51,7 +51,7 @@ function Header({ lang, setLang }: { lang: Language; setLang: (v: Language) => v
   const t = content[lang]
   return <header className="nav-wrap">
     <nav className="nav container">
-      <a className="brand" href="#top"><span className="brand-mark">A</span><span><strong>ALASU</strong><small>Academic Lyceum</small></span></a>
+      <a className="brand" href="#top"><img src="/alasu-logo.png" alt="ALASU Logo" className="brand-logo" /><span><strong>ALASU</strong><small>Academic Lyceum</small></span></a>
       <div className={`nav-links ${open ? 'open' : ''}`}>{navigation.map((item, i) => <a key={item.label} href={item.href} onClick={() => setOpen(false)}>{t.nav[i]}</a>)}</div>
       <div className="nav-actions"><div className="language-switcher"><Globe2 size={15}/><select value={lang} onChange={e => setLang(e.target.value as Language)}>{Object.entries(langNames).map(([value, label]) => <option key={value} value={value}>{label}</option>)}</select></div><a className="nav-cta" href="#admissions">{t.admissions}<ArrowRight size={15}/></a><button className="menu-button" onClick={() => setOpen(v => !v)} aria-label="Menu">{open ? <X/> : <Menu/>}</button></div>
     </nav>
